@@ -1,0 +1,51 @@
+whoami
+pwd
+ssh-keygen -t ed25519
+cat ~/.ssh/id_ed25519.pub
+mkdir repogit
+cd repogit
+pwd
+git clone git@github.com:chitjab/TP1_AySO_Otero_Bautista.git
+cd TP1_AySO_Otero_Bautista
+git status
+cat /etc/os-release
+man grep
+grep -i Home_url /etc/os-release
+grep -i Home_url /etc/os-release > datos_url.txt
+cat /etc/os-release
+cat datos_url.txt
+git add datos_url.txt
+git status
+git commit -m "Agrego datos_url.txt"
+git config --global user.name "Bautista Otero"
+git config --global user.email "bautistaoteroficial@gmail.com"
+git config --global --list
+git commit -m "Agrego datos_url.txt"
+git push
+whoami
+echo "Usuario=$(whoami)" > datos_usuario.txt
+cat datos_usuario.txt
+git add .
+git status
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git push
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt
+cat datos_usuario.txt
+git add datos_usuario.txt
+git status
+git commit -m "feat: Añadiendo información de CPU"
+git push
+cat <<EOF >> README.md
+Alumno: Bautista Otero
+División: 113
+Turno: Mañana
+EOF
+
+cat README.md
+git add README.md datos_usuario.txt
+git status
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git push
+mkdir -p ~/material1/uni{1,2,3} ~/material2/uni{1,2,3}
+ls -R ~/material1 ~/material2
+history -a
